@@ -1,0 +1,37 @@
+#todo{
+    .container{
+        width: 50%;
+        margin: 30px auto;
+    }
+    @media (max-width:1000px){
+        .container{
+            width: 90%;
+        }
+    }
+    .todos{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 2%;
+        margin-top: 10px;
+    }
+    .todos-title{
+        font-size: 18px;
+        text-align: center;
+    }
+    .title-cont{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .add-todo{
+        background-color: #F28C28;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        width: 80px;
+    }
+    
+}

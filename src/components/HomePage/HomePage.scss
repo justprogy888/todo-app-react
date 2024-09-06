@@ -1,0 +1,47 @@
+#home{
+    margin-top: 50px;
+    .instructions{
+        margin: 20px auto;
+        background-color: rgba(0,0,0,0.85);
+        width: 50%;
+        border-radius: 10px;
+        color: white;
+        padding: 40px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .instruction-title{
+        font-size: 26px;
+        text-align: center;
+    }
+    .instruction-author{
+        text-align: center;
+        font-size: 12px;
+        font-style: italic;
+    }
+    .main-list{
+        list-style: none;
+    }
+    .main-list li{
+        margin-top: 15px; 
+    }
+    .included-list li{
+        margin-left: 40px;
+        margin-top: 6px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .li-title{
+        font-size: 18px;
+        font-weight: 350;
+    }
+    @media (max-width:1000px){
+        .instructions{
+            width: 90%;
+        }
+    }
+}
+
+

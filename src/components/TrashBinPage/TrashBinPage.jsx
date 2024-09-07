@@ -27,7 +27,9 @@ const TrashBinPage = () => {
 					{
 						deletedTodos.length != 0 ? deletedTodos.map(el=>{
 							let date = new Date(el.date)
-							let textDate = date.getFullYear() + "/" + date.getMonth() + "/" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+							let month = date.getMonth() <= 9 ? "0" + date.getMonth() : date.getMonth()
+							let day = date.getDate() <= 9 ? "0" + date.getDate() : date.getDate()
+							let textDate = date.getFullYear() + "/" + month + "/" + day + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
 							return (
 								<DeletedTodoCard text={el.text} id={el.id} title={el.title} date={textDate} changeDeleteId={changeDeleteTodoId} changeModalState={changeDeleteModalState} changeDeletedTodos={changeDeletedTodos}/>
 							);

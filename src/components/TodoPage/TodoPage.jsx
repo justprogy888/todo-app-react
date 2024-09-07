@@ -38,8 +38,8 @@ const TodoPage = () => {
 						todos.length != 0 ? todos.map(el=>{
 							let date = new Date(el.date)
 							let month = date.getMonth() <= 9 ? "0" + date.getMonth() : date.getMonth()
-							let day = date.getDate() <= 9 ? "0" + date.getDate() : date.getDate()
-							let textDate = date.getFullYear() + "/" + month + "/" + day + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+							let day = date.getMonth() <= 9 ? "0" + date.getMonth() : date.getMonth()
+							let textDate = date.getFullYear() + "/" + month + "/" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
 							return (
 								<TodoCard text={el.text} id={el.id} title={el.title} date={textDate} isFavorite={el.isFavorite} isChecked={el.isChecked} modalState={changeDeleteModalState} changeDeleteTodoIndex={changeCurrentTodoIndex} todos={todos} setTodos={setTodos} changeRedactModalState={changeRedactModalState}/>
 							);
